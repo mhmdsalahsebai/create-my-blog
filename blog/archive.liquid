@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections.post
+  size: 10
+  alias: posts
+  reverse: true
+title: حميع المقالات
+layout: main
+---
+
+{% assign sorted_posts = posts | sort: "date" | reverse %}
+{% for post in sorted_posts %}
+    {% include "_post-preview.liquid" %}
+{% endfor %}
+
+<!-- Pagination buttons -->
+{% include "_posts-pagination.liquid" %}

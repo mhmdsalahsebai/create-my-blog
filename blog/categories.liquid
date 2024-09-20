@@ -1,0 +1,27 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "/categories/{{ category | slugify }}/index.html"
+layout: main
+eleventyComputed:
+  title: "الفئة: {{ category }}" 
+---
+
+{% assign posts = collections.post | filterByCategory: category %}
+
+<header class="main-header">
+    <h1 class="main-header-title">الفئة: {{ category }}</h1>
+    <div class="main-header-info text-secondary">
+        <span>
+        {{ posts.length }}
+        تدوينة
+        </span>
+    </div>
+</header>
+
+
+{% for post in posts %}
+    {% include "_post-preview.liquid" %}
+{% endfor %}

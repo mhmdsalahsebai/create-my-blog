@@ -1,0 +1,28 @@
+<nav aria-label="صفحات المقالات" class="pagination-buttons">
+  <div class="pagination-start">
+    {% if pagination.href.previous %}
+      <a class="button" href="{{ pagination.href.previous }}" rel="prev nofollow" aria-label="الصفحة السابقة">
+        <span aria-hidden="true">&laquo;</span> السابق
+      </a>
+    {% else %}
+      <span class="button text-button" aria-disabled="true" aria-label="لا توجد صفحة سابقة">
+        <span aria-hidden="true">&laquo;</span> السابق
+      </span>
+    {% endif %}
+
+    {% if pagination.href.next %}
+      <a class="button" href="{{ pagination.href.next }}" rel="next nofollow" aria-label="الصفحة التالية">
+        التالي <span aria-hidden="true">&raquo;</span>
+      </a>
+    {% else %}
+      <span class="button text-button" aria-disabled="true" aria-label="لا توجد صفحة تالية">
+        التالي <span aria-hidden="true">&raquo;</span>
+      </span>
+    {% endif %}
+  </div>
+  <div class="pagination-end">
+    <span class="page-info" aria-current="page">
+      الصفحة {{ pagination.pageNumber | plus: 1 }} من {{ pagination.pages.length }}
+    </span>
+  </div>
+</nav>

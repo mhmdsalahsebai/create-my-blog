@@ -1,0 +1,22 @@
+{
+  "name": "create-my-blog",
+  "version": "1.0.0",
+  "description": "Blog Starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mohamed Salah",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy-img": "^4.0.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+    "eleventy-critical-css": "^2.0.2"
+  }
+}

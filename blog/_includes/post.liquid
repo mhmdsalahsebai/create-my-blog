@@ -1,0 +1,29 @@
+---
+layout: main
+---
+
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="main-header" aria-label="رأس المقال">
+    <h1 class="main-header-title" itemprop="headline">{{ title }}</h1>
+    <div class="main-header-info text-secondary">
+      <time datetime="{{ date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ date | date: "%Y-%m-%d" }}</time>
+      <span class="separator" aria-hidden="true">•</span>
+      <span itemprop="timeRequired">
+        {% readingTime content %} دقيقة
+      </span>
+    </div>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <hr>
+
+  <div class="post-categories" aria-label="التصنيفات">
+    {% for category in categories %}
+      <a href="/categories/{{ category | slugify }}" class="category-link" itemprop="keywords">{{ category }}</a>
+    {% endfor %}
+  </div>
+</article>
+

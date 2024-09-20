@@ -1,0 +1,16 @@
+<article class="post-preview h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="post-categories">
+        {% for category in post.data.categories %}
+            <a href="/categories/{{ category | slugify }}" class="category-link p-category" rel="category tag">{{ category }}</a>
+        {% endfor %}
+    </div>
+    <h2 class="post-title p-name" itemprop="headline">
+        <a href="{{ post.url }}" class="post-link u-url" itemprop="url">{{ post.data.title }}</a>
+    </h2>
+    <p class="post-excerpt p-summary" itemprop="description">{% excerpt post %}</p>
+    <footer class="post-footer text-secondary">
+        <time class="post-date dt-published" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: '%Y-%m-%d' }}</time>
+        <span class="separator" aria-hidden="true">•</span>
+        <span class="post-reading-time" itemprop="timeRequired">{% readingTime post %} دقيقة</span>
+    </footer>
+</article>

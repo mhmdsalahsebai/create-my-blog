@@ -1,0 +1,10 @@
+blog/images/*
+!blog/images/arabic-tech-content.webp
+
+_site/
+
+blog/posts/*
+!blog/posts/أكبر-مشكلة-بتواجه-المحتوى-العربي-التقني.md
+!blog/posts/posts.11tydata.json
+
+node_modules/
