@@ -14,7 +14,7 @@ html {
 html {
   font-family: "Cairo", sans-serif;
   font-display: swap;
-  font-size-adjust: 0.105;
+  size-adjust: 105%;
 }
 
 :root {
