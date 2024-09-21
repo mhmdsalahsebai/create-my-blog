@@ -1,7 +1,9 @@
 {
-  "url": "https://mhmdsalah.pages.dev",
+  "url": "https://mhmdsalah.vercel.app",
   "author": "محمد صلاح",
   "logo": "محمد صلاح",
+  "email": "me@example.com",
   "linkedin": "https://www.linkedin.com/in/mohmdsalah",
-  "github": "https://github.com/mhmdsalahsebai"
+  "github": "https://github.com/mhmdsalahsebai",
+  "description": "مقالات وشروحات في هندسة البرمجيات من محمد صلاح في React، JavaScript، HTML، CSS، Web Security"
 }
