@@ -1,30 +1,20 @@
 ---json
 {
   "permalink": "feed.xml",
-  "eleventyExcludeFromCollections": true,
-  "metadata": {
-    "title": "My Blog",
-    "subtitle": "I am writing about stuff.",
-    "url": "https://example.com/",
-    "feedUrl": "https://example.com/feed.xml",
-    "author": {
-      "name": "Your Name",
-      "email": "me@example.com"
-    }
-  }
+  "eleventyExcludeFromCollections": true
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <title>{{ metadata.author }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ metadata.url }}/feed.xml" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <name>{{ metadata.author }}</name>
+    <email>{{ metadata.email }}</email>
   </author>
   {%- for post in collections.post | reverse %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
