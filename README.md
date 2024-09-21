@@ -15,6 +15,10 @@ CreateMyBlog is a blog built with Eleventy, featuring the following functionalit
 11. 💯 **100 Score on Performance, Accessibility, SEO, and Best Practices on Both Mobile and Desktop**
 12. 🎉 **Free Hosting**
 
+## DEMO
+
+[DEMO](https://mhmdsalah.vercel.app)
+
 ---
 
 ## Setup Documentation
@@ -28,16 +32,18 @@ To use this project, make sure you have **npm** and **git** installed on your de
 
 2. **Clone the Forked Repository**  
    Use the command to clone the repository to your local machine:
-   \`\`\`bash
+
+   ```bash
    git clone https://github.com/your-username/create-my-blog.git
-   \`\`\`
+   ```
 
 3. **Install Dependencies**  
    Navigate to the project folder and install the dependencies:
-   \`\`\`bash
+
+   ```bash
    cd eleventy-blog
    npm install
-   \`\`\`
+   ```
 
 4. **Add you Metadata**
    Navigate to metadata.json file inside `blog/_data` and add your data.
@@ -46,9 +52,10 @@ To use this project, make sure you have **npm** and **git** installed on your de
 
 6. **Build the Blog**  
    To build and serve the blog locally, use this command:
-   \`\`\`bash
+
+   ```bash
    npx @11ty/eleventy --serve
-   \`\`\`
+   ```
 
 7. **Host Your Blog**  
    You can host your forked blog for free on platforms like GitHub Pages, Cloudflare Pages, Netlify, or Vercel. These platforms support static file hosting and automated deployment.
