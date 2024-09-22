@@ -1,4 +1,4 @@
-# Eleventy Blog
+# CreateMyBlog
 
 CreateMyBlog is a blog built with Eleventy, featuring the following functionalities:
 
@@ -41,11 +41,11 @@ To use this project, make sure you have **npm** and **git** installed on your de
    Navigate to the project folder and install the dependencies:
 
    ```bash
-   cd eleventy-blog
+   cd create-my-blog
    npm install
    ```
 
-4. **Add you Metadata**
+4. **Add Your Metadata**
    Navigate to metadata.json file inside `blog/_data` and add your data.
 5. **Write or Edit Blog Posts**  
    Add new blog posts by creating a new `.md` file or edit the sample files in the `blog/posts` folder.
@@ -70,8 +70,8 @@ To use this project, make sure you have **npm** and **git** installed on your de
 2. **Import Your Forked Repo**  
    After signing in, choose the **Import Project** option and select your forked repository.
 
-3. **Select the Output Directory**  
-   When setting up the project, select the `_site` folder as the output directory (this is where Eleventy generates the static files).
+3. **Select the Root Directory**  
+   When setting up the project, select the `_site` folder as the root directory (this is where Eleventy generates the static files).
 
 4. **Deploy Your Blog**  
    Vercel will automatically build and deploy your site after selecting the repository and folder. Once complete, your blog will be live.
